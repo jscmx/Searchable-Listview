@@ -456,6 +456,9 @@ class _SearchableListState<T> extends State<SearchableList<T>> {
     return Column(
       children: widget.searchTextPosition == SearchTextPosition.top
           ? [
+              SizedBox(
+                height: widget.spaceBetweenSearchAndList,
+              ),
               SearchTextField(
                 filterList: _filterList,
                 focusNode: widget.focusNode,
